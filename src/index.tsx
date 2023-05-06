@@ -17,7 +17,7 @@ import {
 import { useAnimation } from './useAnimation';
 import { Image } from 'react-native';
 
-interface AnimatedImageProps extends Omit<ImageProps, 'style'> {
+export interface AnimatedImageProps extends Omit<ImageProps, 'style'> {
   fadeInDuration?: number;
   imageStyle?: StyleProp<ImageStyle>;
   containerStyle?: StyleProp<ViewStyle>;
