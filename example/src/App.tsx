@@ -8,7 +8,7 @@ export default function App() {
     <View style={styles.container}>
       <AnimatedImage
         source={{
-          uri: 'https://wrong-ur.com',
+          uri: 'https://wrong-url.com',
         }}
       />
 
