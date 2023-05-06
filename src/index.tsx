@@ -17,7 +17,7 @@ import {
 import { useAnimation } from './useAnimation';
 import { Image } from 'react-native';
 
-interface LoadingFadeInImageProps extends Omit<ImageProps, 'style'> {
+interface AnimatedImageProps extends Omit<ImageProps, 'style'> {
   fadeInDuration?: number;
   imageStyle?: StyleProp<ImageStyle>;
   containerStyle?: StyleProp<ViewStyle>;
@@ -27,12 +27,12 @@ interface LoadingFadeInImageProps extends Omit<ImageProps, 'style'> {
   customMissingImageComponent?: React.ReactNode;
 }
 
-interface LoadingFadeInImageState {
+interface AnimatedImageState {
   isLoading: boolean;
   isError: boolean;
 }
 
-export const LoadingFadeInImage = (props: LoadingFadeInImageProps) => {
+export const AnimatedImage = (props: AnimatedImageProps) => {
   const {
     fadeInDuration = 300,
     imageStyle,
@@ -47,7 +47,7 @@ export const LoadingFadeInImage = (props: LoadingFadeInImageProps) => {
   } = props;
 
   const { fadeIn, opacity } = useAnimation();
-  const [state, setState] = useState<LoadingFadeInImageState>({
+  const [state, setState] = useState<AnimatedImageState>({
     isError: false,
     isLoading: true,
   });
